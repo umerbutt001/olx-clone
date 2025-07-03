@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="container-fluid navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid" class="width">
+            <a class="navbar-brand" href="#">
+                <img src="images/cart.png" alt="" style="width: 50px;height: 50px;">
+
+            </a>
+            <span style="margin-left: 10px;color: blue;font-size: larger;">Digital Shopping</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                    <!-- <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li> -->
+                    <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Link
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li> -->
+                    <!-- <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Link</a>
+        </li> -->
+                </ul>
+                <!-- <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+            </div>
+        </div>
+    </nav>
+
+    <div class="div1">  
+        <button class="button1"><span style="font-size: 20px;margin: 15px 18px;">👤</span></button>
+        <button class="button2">+</button>
+        <button class="button3" id="logout">logout</button>
+    </div>
+
+    <!-- <div class="div2">
+        <img src="images/phamhplet.png" alt="" style="width: 100%;">
+    </div> -->
+
+    <div class="div2">
+        <div
+            style="width: 100%; height: 150px; background: linear-gradient(45deg, #ff6b6b, #4ecdc4); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: bold;">
+            🛍️ Welcome to Digital Shopping! 🛍️
+        </div>
+    </div>
+
+
+
+    <div class="save-cards" id="savecard">
+        <p style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+            Electronic Appliences</p>
+        <div onclick="phone()" class="card" id="cardmobile">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbT9VQsYgjyF2ga1lUWTXEDckFcDwUoPW-Rw&s"
+                alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 20px;">Mobile</p>
+        </div>
+        <div onclick="car()" class="card" id="cardcar">
+            <img src="https://i0.wp.com/www.toyotaravi.com/wp-content/uploads/2015/12/1.8-white-scaled.jpg?resize=798%2C466&ssl=1"
+                alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 20px;">Cars</p>
+        </div>
+        <div onclick="bike()" class="card" id="cardbike">
+            <img src="https://live.staticflickr.com/2292/5737070739_c0f260d528_b.jpg" alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 20px;">Bikes</p>
+        </div>
+        <div onclick="wash()" class="card" id="cardwash">
+            <img src="https://qasimelectronics.pk/wp-content/uploads/2023/10/Samsung-Front-Load-Washing-Machine-WW90TA046AX4.jpg"
+                alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 10px;">Washing Machine</p>
+        </div>
+        <div onclick="micro()" class="card" id="cardmicro">
+            <img src="https://estore.gabanational.net.pk/cdn/shop/files/GN-2024M.jpg?v=1710401244" alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 10px;">MicroWave Oven</p>
+        </div>
+        <div onclick="led()" class="card" id="ledtv">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/41BO3WztPIL._SL500_._AC_SL500_.jpg" alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 20px;">Led TV</p>
+        </div>
+        <div onclick="ac()" class="card" id="ac">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1APK5UfzfL8cXemTRqzaQwjlPhjN2ZlYtVinHxExEN-YQ91VfZFYcwDFkRlMI_TT2MyE&usqp=CAU"
+                alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 10px;">Air Conditionior</p>
+        </div>
+        <div onclick="refrigerator()" class="card" id="fridge">
+            <img src="https://yasirelectronics.com/wp-content/uploads/2021/10/RT62K7350BS_1.jpg" alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 20px;">Refrigerator</p>
+        </div>
+
+
+        <p style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+            Wooden Fuurniter</p>
+        <div onclick="wardrobe()" class="card" id="wardrobes">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9dNyUiZcSW7YWKBubzQ6EXFX97MsuL_IYeg&s"
+                alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 20px;">WardRobe</p>
+        </div>
+        <div onclick="tables()" class="card" id="table">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEQ2OkpiyipTnbIh10vIZQaXlFW-IivWMjjw&s"
+                alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 10px;">Computer Tables</p>
+        </div>
+        <div onclick="bed()" class="card" id="beds">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSB48rd-ajh-bFeXWCW3u9_c4iUZTwJIQVs6Q&s"
+                alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 20px;">Beds</p>
+        </div>
+        <div onclick="dressingtable()" class="card" id="dressing-table">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4sMkhTRCDiK-xuU7jsP37xsFRzfjbqFQ-rQ&s"
+                alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 10px;">Dressing Table</p>
+        </div>
+        <div onclick="chair()" class="card" id="chairs">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRDa3b37MeBB_JE-hI5wcD0afXnfe99l_oBA&s"
+                alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 10px;">Wooden Chairs</p>
+        </div>
+        <div onclick="dinningtable()" class="card" id="dinningtables">
+            <img src="https://blog.luxury-italianfurniture.com/hubfs/adora-choose-perfect-contemporary-dining-table-ambra.jpg"
+                alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 10px;">Dinning Table</p>
+        </div>
+        <div onclick="couch()" class="card" id="couchs">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyH7KhEWqFvGu-SSHZMoSLcG0tnamTXKa9sg&s"
+                alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 20px;">Couch</p>
+        </div>
+        <div onclick="kabnets()" class="card" id="kabnet">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgGa6_1e_HFtQR8cfa_rINb3j6v7K0e7tm_A&s"
+                alt="">
+            <p style="text-align: center;font-weight: bolder;font-size: larger;margin-top: 10px;">Kitchen kabnets</p>
+        </div>
+    </div>
+
+
+
+    <div>
+
+
+        <div data-aos="fade-up">
+
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Mobile Phones</p>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQeiLaGmYKxw-9b6rkVhPyLTfrU34-lRfZIw&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrnTM6z_s2lt-z1ylij0IvcZiFPVo7NutAHQ&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJRg7IIJ2JzZWm_6K-rmLzerH8X1WzUOOrNA&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQipjQ9_7-kpI_Nt3kq1a6qMe0p2Vuo8WuOLQ&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQtBj8EA3-vpLLhJ12FL0oFQRHRGDQUKVDBA&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5ZnQOri-AP8w2RiQOEZSkISXkyUHIMdTxQA&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmMlNJp9URIDKnLPO16UeLUPnrnu2z0cvq7w&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6p7UsZg6i0iXAWd1kbjW3oiPs1XTKa04HVg&s"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Cars</p>
+                <div class="div4">
+                    <img src="https://global.toyota/pages/models/images/20191018/thumbnail/corolla_w610_01.jpg" alt=""
+                        class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRboKmbBtFTfxl2OaVHZvI95NUcYodjdLJEplGB_2oFmK4gPvW9bOfUlDgp9RmDE5xpkLE&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwC5ZGDNKDuUnRkEYNUSCViXIHovfuoKMFoLRi7UNmkD6JzLBgrZGBfDCgX6J-ieYoKWQ&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://d3ogcz7gf2u1oh.cloudfront.net/dealers/1000islands/assets/2019camry.png" alt=""
+                        class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuY8zOngrmq8foC1fYFC4E2SwLNclpy4iHwnomhyr8VC4qsKKf8JLcX7fmigsvEmhC264&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://i0.wp.com/www.toyotaravi.com/wp-content/uploads/2015/12/1.8-white-scaled.jpg?resize=798%2C466&ssl=1"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-1YJ3EL5BU8DkfPhQ-J8LXh0pwiDPZocqOg&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpQ4cT8a6XzC1C2D5IJ2dqhZZkWlOnVjii5CTW8-stBrueC5uGfUvCjIi2bieLqQar06M&usqp=CAU"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Bikes</p>
+                <div class="div4">
+                    <img src="https://beep-prodbucket.s3.ap-south-1.amazonaws.com/user/3470_UNICORN_RIGHT_SIDE_VIEW.JPEG__10112022_093038_.JPEG"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV0ZimX7HT1ry5dhUrgW9xiVXyAXGU3R4kFOeTdqdYlk5gUAhfK5Os_jTmd8FyRFVJCDM&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmoobAAgX-tr3wcbeovdQBT1qRMAYQgYfdXU5rlVRs7BXAXoDM9p66J6TldOfzmqUVrJg&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS67BBAOGENm1bX7QBX8GNkxgMDgCmwxk5X-g&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://live.staticflickr.com/2292/5737070739_c0f260d528_b.jpg" alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTUUe-czPktufQ9gIJK3M8WxDLWIPoRogqr_U99D91DU0nv-MxMCzhyZO-0r43RynoIM4&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuGUKnN93L24T-VzsvskkqiuXG6BkK08IkdA&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://images.drivespark.com/webp/fit-in/450x400/bikes-photos/modelsoverview/76/tvs-apache-rtr-160-review-design-and-style.jpg"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Washing Machine</p>
+                <div class="div4">
+                    <img src="https://whirlpoolindia.vtexassets.com/arquivos/ids/164350-800-auto?v=638731268849000000&width=800&height=auto&aspect=true"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTunaAT8zhYRQrGT60mt245uVhrpkENMuUhMC-vmuPH5fm_rex0jp6ts8HBQ5JGynjbBTA&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROaCNkIhcL6yF_AZDU4jpJySlgGE-e_mcOPrGug-gG_okKRtZrr91hDKIMnVu3OroXRUs&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://whirlpoolindia.vtexassets.com/arquivos/ids/164386/Xpert-care-Silver-lid-open-O3-6.5kg_1500x1500.jpg?v=638731267672600000"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPq_Zaubk7575AXKpMJs6-27klaK9mWsueUw&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOisWcQkm2-_T9NZClNQG3oD4qzyRzgrxCMQ&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO29Fa29IGr90MvixKOnjjShEJeAO0nQdBrA&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV0jbiy3woR34t2sbwnS5YRWE7bYea47VviQ&s"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Microvawe Oven</p>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNQlB5b52TjlJwIkMWKEV1iKWvocktBZy0Q&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcD6m7oKJAlLaNK_TVe0XaiJchRcgTtFr8Qg&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQG2APrZ1K8EwoufFuUGXTAXfTRnMGIqb2BBg&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://img.freepik.com/free-vector/microwave-oven-with-light-inside-isolated-white-background-kitchen-appliances_134830-658.jpg?semt=ais_hybrid&w=740"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://media.istockphoto.com/id/489937746/photo/microwave-stove-isolated.jpg?s=612x612&w=0&k=20&c=vUi8YaHdjDvVHJPXCcYHrWkELl1l8GLpGTg2hUl35V4="
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqG5atidO3b44V9EvdGvwj3c-TXu4o4MpAow&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://bakar.pk/cdn/shop/products/PEL25Lconv.jpg?v=1742558132" alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSui6mxIz78-uvxV2CXS7kECsd9M8eWR59UTAiOwYXk6R-Oj7f1drW1a2SoTA7YI46GAlk&usqp=CAU"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    LED TV</p>
+                <div class="div4">
+                    <img src="https://img.freepik.com/premium-vector/flatscreen-tv-with-black-frame-stand_195186-12887.jpg"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6AXgywf2JmEYDuQxjJ8P8bxPmNvYd8dZQNw&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://image.made-in-china.com/2f0j00dmIhgLuaYEoV/32inch-Fameless-Smart-LED-TV.webp"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4lDqECl86P7A-kLkbe7qXdu4dlLYn3mioww&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvNHU4hXaC6MdtfdjqjSZcHja9BmzsQ6KNGA&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNloDnyHcMN7-RBVzOiMaApALXNYX8jsvuzQ&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI9n02Y9ztiPzfLGYuuwWBa783A05_j5UskQ&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQglvrBHfK-gU4trTdXIKAHc4TdDKCZeG_lMQ&s"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Air Conditionior</p>
+                <div class="div4">
+                    <img src="https://www.cruiseac.com/assets/images/product/IiaV2pcoC3mSB9TgPdbAjpg.jpg" alt=""
+                        class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQMnuj5jOmQ-fb_NCNvUk-GTTnz6dt8DrvEaEa5LjvUot_DzC82pTUpp46MG8lEaQT4q8&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://www.almumtaz.com.pk/wp-content/uploads/2024/04/Dawlance-Econo-X-1.5-Ton-Inverter-Split-AC-1.webp"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCT-D6sTV1YvWfVNoBRUvSilcNt2nSEKhYnxfd0sdJi9lHS7IT_CYzZSgwlR_SKnZq1gs&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQMnuj5jOmQ-fb_NCNvUk-GTTnz6dt8DrvEaEa5LjvUot_DzC82pTUpp46MG8lEaQT4q8&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://shandaarbuy.pk/cdn/shop/files/Haier_1.5_ton_HSU-19HFC.png?v=1744895302" alt=""
+                        class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTu2rZPiPit8bsardQnQw8pMBtbtk7S77J-pa2nMMXcJRNoX73qN2tOBVh5hdtzdzuAdlE&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://havells.com/media/catalog/product/cache/844a913d283fe95e56e39582c5f2767b/3/_/3_star_grande_heavy_duty_2_3.jpg"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Refrigerator</p>
+                <div class="div4">
+                    <img src="https://cityelectronics.com.pk/wp-content/uploads/2024/07/Samsung-RT50CG6404s9.webp"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTYfZqgU4QHRcQ_83N7LXQx2xzF6-5yUQKK0z5bHKspgPKazV5Znic1w01NMrWawp5RcA&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://www.almumtaz.com.pk/wp-content/uploads/2024/11/Dawlance-9140WB-Chrome-Double-Door-Refrigerator-768x768.webp"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvI6h73sfYaesdE7ViGd5udY-24uZ_5dtpKQ&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRxwq3ThaR5R5SU2pC4IljN_82eGSNzqws4FqxuNr64a-6GeLeWMJBnxlJKA732oRQ0uA&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkpMWX4cUcHZqdFbNWW_XJ9Yd4PObEo4G8Gd2974FdfPAKmgW2G1i2uQL2P-YhbETSeO8&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS33VvEWlUhoO1clr-3spOy_ckIXv5OY9Db2ajDVeSzaXK1cJ47TIg7ab7jBAESw7oGpoE&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://www.electrogas.pk/cdn/shop/files/Haier-Inverter-Refrigerator-HRF-368IFRA-1.jpg?v=1698177880"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    WardRobe</p>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKikg25lYKSbyKA7tY7qhqH-S4OPJMpkL2Cg&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP8zLy1jEs-o-0FNd5mVFYjKR7tBWjQY4jhdblltQjgou4G-DWR1e0ij94hwwIclC_QiM&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBYP0tmntMPTG9fkPM7jau76nokqFENbeN6L27rAf_UO9NhWj1X1cjZzKbGNYPIzavWMc&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDXhbD-DM5QnHtgCnWnkbFnUBF_lN8hlUxYJoqvmrfYQetBY1kjedHwXD90SECLnDRy8Y&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://interwood.pk/cdn/shop/products/eses-3-082d1cd-interwood-mobel.jpg?v=1750859941"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFK8Si_iYPd6zodlDNqqqjxd1KLIGyAw6g9ZIB0-5z47BIToKvNrFeXcEoqhy6bSaALvU&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC_LwkG3I0pfh0vK2zC4Y6MzrADc-nZ-nIwg_RROZeE1v-o-68bS49OhRkLFV3njbHu28&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ07ItK5NAWpHwgZgswlD7hf99YS1btiNQxg&s"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Computer tables</p>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTdvJD4Nm7FdpZhqK0OrR7x1NxV8MXV1dAaw&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQFl98AiqGKYcDVP6FsFu-lnvgngTtJeZHrlkLPdSz58iZs9iKBO4WM_EI6H-WFqkOdK8&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyuJ0LMJjaGhVyrpXr7Iv8PKSSvSUfcIGe1C-OLDsFyRtvjWADp-T9bNR2iy-L5aP-fzc&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS88qwCGO72oSHRT32YEK7UGbbbAGArTgMN_5LcWLmS6vHHBZkVBvjG2Qdo7jdKByCLwAI&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmPLTQckPrEhUAO6mqs76T4wLGnz1bS-B1hzwN06BQrbmEm8khzPJhmvacX0S4wu1uvE4&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZjRqgXfn8hmscwUDujVuHOZR4RNaeVqoOWVFwhPlYruQe7xGhrNBTgRIz9efbcbFk6w&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://woodbuzz.in/cdn/shop/files/walnut1_a142d937-516b-42ad-b608-6e63897166b4.jpg?v=1701850117"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAVg61w2CjSNjn3m_qXtvkinVs0aOJhvAtl6tA9AvP2mq0MXSL9Y6DN2jPLw5oUBW50Og&usqp=CAU"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Beds</p>
+                <div class="div4">
+                    <img src="https://www.moltyhome.com/cdn/shop/files/Bed-2.1_800x.jpg?v=1745490857" alt=""
+                        class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5dNPPrSpGWYrSGDWDygY1GTHBKEOZYEEzPUCv3xoPaSTPZc_8DeXnIRPitLyfKIda1rA&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToMbCxng5Lt-Rlp7TEckImkdh57HLV0CGQvA&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThScF4pq-D7bfK8TFVYz5KR0CQWsjVlctFJYzzKjd65SZDEKs2tPh5iL_raR4gF3VPV2Y&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9A21S0_KNEY6-flFarN3P5MI4r753ci0tUw&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGo6GmaRphonlQZCl9KG0Tw25Fkd4AripSolEZDko5apzj4Vk-o8SxoiATLCjSlxqae-M&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_1uWkD0rJ_T5KzNht_ePVwtNuBkPzY5MgqiLUW8DoiBPKiTqOKfaJ33TS8D1Krky_1yQ&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4bTM0w0rs8hFsxklCmJGiSsHMSXN64WDlQg&s"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Dressing Table</p>
+                <div class="div4">
+                    <img src="https://static-01.daraz.pk/p/ceaa52f5d2cec81330ee2d53ee7e3ee1.jpg" alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://furniturezone.pk/wp-content/uploads/2024/06/Cabinet-Dressing-Table-with-Mirror-Drawers-1.webp"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcldYrgMzI9-d4n7U9agz0qYjGm8nVovfuFw&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnQ-Yr27tfqhom6a75-pxkRsRyOb6SSB6-G7DoGQ9JLF9aeao5S7CEMovtKDhuhecEszg&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtR4JEin5lbYKU-8PV3DRzQKhgtM2hvpWB65AmlY65wwEMNTEcIeemmX_6ut7Nc7UKbKs&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://img.zcdn.com.au/lf/50/hash/38295/19132143/4/White+Madelaine+4+Drawer+Dressing+Table+with+Stool.jpg"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1k1EIyaAIFwoYV_tEgvmYE68oc2MUc6roKGtv_ASfI0DkwHdjTCAaiw0GHoVQI8poHo4&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM3rk6dYY4LF8ng6ACv4Ui7-lGYuPX4obLPg-yGalX9pnbiloR-9cBY_7kDX0t39LzWtU&usqp=CAU"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Wooden Chairs</p>
+                <div class="div4">
+                    <img src="https://thelinenhouse.pk/cdn/shop/files/5028092.jpg?v=1726301454" alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnJj6SHFByWgaW-MUoWXEWldzGan4Pu52coYlh-R_nNMTV1ZHjwH114Dmv8JjEYsdEifI&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCyIU95XLeFNhAGIZLK5RZlhNT0FE4lOXxARk1s4PanHheZ1bOPV1qvOt2bxR2NrTa1ok&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrloKPk-OYdwQs4sNCVhGKcqb7FosKDP9gqan8aySx42ASIS_YvtRAR1XQYe6gLx6Y2IU&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJuYQUcDPwdellp-qQHdq81OcUYxfDIcDcz7_L5I58JkVUj_vmd2G_KTF1AHiMLuUMlPM&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCvVpLygFzjp8z8Lwr-KQ0cePNnOVh8-76vCpvTIaX3KdRsvwYLOt7_Ac0rvJQQ_Nhvho&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSodu7K5Q0VHpj-3019cNtz8Ho-d-n6UEDZdg&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYOYfZTPGbsfouL8n4QtC1QfW7q_N6lCuNQltRDSvsrp8qI8vPzGCD2SxAMf8foDiZ228&usqp=CAU"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Couch</p>
+                <div class="div4">
+                    <img src="https://m.media-amazon.com/images/I/81o2owE1N7L._AC_SL1500_.jpg" alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuqwF77fhd8wijbk_valSXDQFRWGz7OZDcTLaRyKQhxagITz8pl15ogHnP7packwxXNPk&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmtvzEu7_dBXkTB8yw1bmRpPLBWG51VtyEGA&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://woodc.pk/wp-content/uploads/2023/05/ieqwif.jpg" alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK9etu9dqa4YrfEMogAxAdXZiyVY8QP1WH8qKNkZv7ap8bo_RohwG-fnoU9da3XoYO0S0&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSenK9Y_gg6ypxAf4OmkPk8X7A5ZCNA5bTWLQ&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwuBC5TzTV06tvabZAKZODespsOutm4LnL6mLqHOnQgKF-3BpGzbWfpkXhqMx4rvBdBhg&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://furniturezone.pk/wp-content/uploads/2025/01/PearlenaModernDiningTableSet29.56_Hx70.87_Lx31.5_W9-Piece1Table8Chairs.webp"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Couch</p>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd5v_7ToWQJSC-nsmJJHYpCriMPOrqzP5-rA&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShOO1ScmUkUyTFE7hFCkRRBUWs2BqeMgTjaVvEd5E8lCBiQ7GI_XycesAABIxgF2Fk5D4&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPI_xgwk87v3e8mEhUJ9gtAelxHfmDgT9sA7S_8NDWMHJRDrwieEU_jus8v7cPCBIWC3k&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg" alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGw9w7LSTC36yw1fvbbZfB86oFObevO9hR0nyUOVJpABMpe4Ryet1dPRxr-XUHmU99QHs&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIqAnbd_Q2AalRvvfdHCz7FQGs6_Q5l-wuQ&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://tarkhan.pk/wp-content/uploads/2017/12/Moooi-Cloud-Three-Seater-Sofa-without-cushions.jpg"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvood1oqlFMoi2dJyy938AejJypZUFBAHjqkeYTPuJM3D43s67B_9U8keKawMNbx2MLBM&usqp=CAU"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+
+        <div data-aos="fade-up">
+            <div class="div3">
+                <p
+                    style="text-align: center;font-weight: bolder;font-size: 30px;margin-top: 30px;color: #03A6A1;width: 99vw;">
+                    Couch</p>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFkllFGE-bfbmEM8k6qm1TbLDuFF5pLaFd2g&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 104,999 <br>Motorola Edge 40 <br>✨ Clean Android + OLED screen
+                        &nbsp;smooth and fast experience.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9hl1IVi3RpO6WgO7fA0CQawmc72O23MdMng&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best low-light
+                        camera
+                        in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLNCfOeozMwUPZxtMjFuZ5H7w3vN1DZnXm3jp_fNcZ5dcXw9-pvQUVk3Bz_7VmfRW4ags&usqp=CAU"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 94,999 <br>Xiaomi Redmi Note 13 Pro+ 5G <br>✨ 120W charging,
+                        curved
+                        AMOLED, great performance.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://wpcdn.us-east-1.vip.tn-cloud.net/www.hawaiihomemag.com/content/uploads/2023/11/c/c/cabinet-supplier-hhr2304-ay-hi-kitchen-bath-9596-3-enhanced-sr.jpg"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 54,999 <br>Samsung Galaxy M14 5G <br>✨ Massive battery, clean UI
+                        —
+                        perfect for everyday use.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDeIrqFU0U8GXB_H6RWqp1MvlCEdMMNI2q6g&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 119,999 <br>Vivo V30 <br>✨ Slim, beautiful display, great
+                        portraits
+                        with
+                        Aura Light.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjjoIN68QLusHhJlivv8yqnj3UglIz31P9xQ&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 84,999 <br>Tecno Camon 30 Premier <br>✨ Flagship feel, best
+                        low-light
+                        camera in its range.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoZGBSBAtIiYuVQAVnUAziSnL6JnBRP1FC8w&s"
+                        alt="" class="size">
+                    <p style="text-align: center;">Rs. 64,999 <br>Infinix Zero 30 5G <br>✨ Stylish, 4K front cam, solid
+                        performance for budget vloggers.</p>
+                </div>
+                <div class="div4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-wiJEwLVrkuZrmsYNbU5QzCGN4jItthfdTw&s"
+                        alt="" class="size"><br>
+                    <p style="text-align: center;">Rs. 109,999 <br>Oppo Reno11 5G <br>✨ Slim design, Sony sensor camera,
+                        and
+                        solid performance.</p>
+                </div>
+                <button onclick="back()" id="back" class="outside">&#60;back</button>
+            </div>
+        </div>
+
+        
+
+
+
+    </div>
+
+
+
+    <div id="imagePreview" style="display:none;">
+        <button onclick="hidePreview()" style="float:right;">❌</button>
+        <img id="previewImg" src="" alt="Preview Image" style="max-width: 100%; height: auto;">
+        <button id="addToCartBtn">Add to Cart</button>
+    </div>
+
+
+
+    <div id="cartOverlay" class="modal">
+        <div class="modal-content">
+            <span id="closeCart" class="close">❌</span>
+            <h2>🛒 Saved to Cart</h2>
+            <div id="cartImagesContainer"></div>
+        </div>
+    </div>
+
+
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>
