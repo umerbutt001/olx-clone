@@ -259,15 +259,16 @@ function showProfile() {
 
     // Profile card
     let card = document.createElement('div');
-    card.style.cssText = `
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        width: 350px;
-        text-align: center;
-        width: 50%;
-    `;
+    card.id = "profileCard";
+    // card.style.cssText = `
+    //     background-color: #fff;
+    //     padding: 30px;
+    //     border-radius: 12px;
+    //     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    //     max-width: 350px;
+    //     text-align: center;
+    //     width: 50%;
+    // `;
 
     card.innerHTML = `
         <h2 style="margin-bottom: 20px; color: #007bff;">👤 My Profile</h2>
